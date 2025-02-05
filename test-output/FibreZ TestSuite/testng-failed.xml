@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FibreZ TestSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utilities.ExtentTestNGListener"/>
+  </listeners>
+  <test thread-count="5" name="FibreZ Smoke Testing(failed)">
+    <classes>
+      <class name="TestCases.TC022_LcoConnectionsPage">
+        <methods>
+          <include name="LcoConnectionsListTest"/>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- TestCases.TC022_LcoConnectionsPage -->
+      <class name="TestCases.TC004_AdminLogin">
+        <methods>
+          <include name="closeApp"/>
+          <include name="adminLoginTest"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- TestCases.TC004_AdminLogin -->
+      <class name="TestCases.TC015_MsoReports">
+        <methods>
+          <include name="msoReportsTest"/>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- TestCases.TC015_MsoReports -->
+      <class name="TestCases.TC009_MsoLogin">
+        <methods>
+          <include name="closeApp"/>
+          <include name="msoLoginTest"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- TestCases.TC009_MsoLogin -->
+      <class name="TestCases.TC011_MsoStandardPlans">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="msoStandardPlansPageTest"/>
+        </methods>
+      </class> <!-- TestCases.TC011_MsoStandardPlans -->
+      <class name="TestCases.TC003_SuperAdminLogin">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="SuperAdminLoginTest"/>
+        </methods>
+      </class> <!-- TestCases.TC003_SuperAdminLogin -->
+      <class name="TestCases.TC032_CustomerChangePlan">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="CustomerChangePlanTest"/>
+        </methods>
+      </class> <!-- TestCases.TC032_CustomerChangePlan -->
+      <class name="TestCases.TC030_CustomerLogin">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="customerLoginTest"/>
+        </methods>
+      </class> <!-- TestCases.TC030_CustomerLogin -->
+      <class name="TestCases.TC027_LcoCollections">
+        <methods>
+          <include name="closeApp"/>
+          <include name="lcoCollectionsTest"/>
+          <include name="startApp"/>
+        </methods>
+      </class> <!-- TestCases.TC027_LcoCollections -->
+      <class name="TestCases.TC023_LcoCustomerCreation">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="lcoNewCustomerCreationTest"/>
+        </methods>
+      </class> <!-- TestCases.TC023_LcoCustomerCreation -->
+      <class name="TestCases.TC013_MsoRevenuePage">
+        <methods>
+          <include name="closeApp"/>
+          <include name="startApp"/>
+          <include name="msoRevenuePageTest"/>
+        </methods>
+      </class> <!-- TestCases.TC013_MsoRevenuePage -->
+    </classes>
+  </test> <!-- FibreZ Smoke Testing(failed) -->
+</suite> <!-- Failed suite [FibreZ TestSuite] -->

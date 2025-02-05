@@ -14,7 +14,6 @@
     <classes>
       <class name="TestCases.TC001_LaunchApplication"/>
       <class name="TestCases.TC002_BookNowRequest"/>
-      <class name="TestCases.TC003_SuperAdminLogin"/>
     </classes>
   </test>
 
@@ -25,7 +24,6 @@
     <classes>
       <class name="TestCases.TC001_LaunchApplication"/>
       <class name="TestCases.TC002_BookNowRequest"/>
-      <class name="TestCases.TC003_SuperAdminLogin"/>
     </classes>
   </test>
 

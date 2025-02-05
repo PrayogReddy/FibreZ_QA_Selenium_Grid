@@ -11,7 +11,7 @@ services:
       - grid
 
   chrome:
-    image: selenium/node-chrome:4.28.1-20250123
+    image: selenium/node-chrome:latest
     shm_size: 2g
     depends_on:
       - selenium-hub
@@ -25,7 +25,7 @@ services:
       - grid
 
   firefox:
-    image: selenium/node-firefox:4.28.1-20250123
+    image: selenium/node-firefox:latest
     shm_size: 2g
     depends_on:
       - selenium-hub

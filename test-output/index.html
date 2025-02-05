@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC003_SuperAdminLogin" class="method navigator-link" hash-for-method="SuperAdminLoginTest">SuperAdminLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -115,11 +101,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC003_SuperAdminLogin" class="method navigator-link" hash-for-method="SuperAdminLoginTest">SuperAdminLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="TestCases.TC002_BookNowRequest" class="method navigator-link" hash-for-method="bookNowFeatureTest">bookNowFeatureTest</a> <!-- method navigator-link -->
@@ -152,34 +133,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestCases.TC003_SuperAdminLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SuperAdminLoginTest">
-                  </a> <!-- SuperAdminLoginTest -->
-                  <span class="method-name">SuperAdminLoginTest</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //li[@class=&apos;text-sm cursor-pointer&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 134.0.2, moz:accessibilityChecks: false, moz:buildID: 20250120135430, moz:debuggerAddress: true, moz:firefoxOptions: {}, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 5.15.167.4-microsoft-standa..., moz:processID: 6000, moz:profile: /tmp/rust_mozprofiledOusx9, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.4:4444/sessio..., se:containerName: , se:noVncPort: 7900, se:vnc: ws://172.18.0.4:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.4:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
-Session ID: 84a22f31-27c9-40a0-b389-342658d4e8e7
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at Utilities.BaseClass.Logout(BaseClass.java:83)
-	at TestCases.TC003_SuperAdminLogin.SuperAdminLoginTest(TC003_SuperAdminLogin.java:59)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -198,21 +151,6 @@ Session ID: 84a22f31-27c9-40a0-b389-342658d4e8e7
                   <a name="bookNowFeatureTest">
                   </a> <!-- bookNowFeatureTest -->
                   <span class="method-name">bookNowFeatureTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestCases.TC003_SuperAdminLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="SuperAdminLoginTest">
-                  </a> <!-- SuperAdminLoginTest -->
-                  <span class="method-name">SuperAdminLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,7 +197,6 @@ Session ID: 84a22f31-27c9-40a0-b389-342658d4e8e7
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.TC001_LaunchApplication&quot;/&gt;
       &lt;class name=&quot;TestCases.TC002_BookNowRequest&quot;/&gt;
-      &lt;class name=&quot;TestCases.TC003_SuperAdminLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Chrome-Test --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Firefox-Test&quot;&gt;
@@ -267,7 +204,6 @@ Session ID: 84a22f31-27c9-40a0-b389-342658d4e8e7
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.TC001_LaunchApplication&quot;/&gt;
       &lt;class name=&quot;TestCases.TC002_BookNowRequest&quot;/&gt;
-      &lt;class name=&quot;TestCases.TC003_SuperAdminLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Firefox-Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -281,10 +217,10 @@ Session ID: 84a22f31-27c9-40a0-b389-342658d4e8e7
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome-Test (3 classes)</span>
+                <span class="test-name">Chrome-Test (2 classes)</span>
               </li>
               <li>
-                <span class="test-name">Firefox-Test (3 classes)</span>
+                <span class="test-name">Firefox-Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -310,36 +246,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SuperAdminLoginTest')
-data.setCell(0, 2, 'TestCases.TC003_SuperAdminLogin')
-data.setCell(0, 3, 20432);
+data.setCell(0, 1, 'bookNowFeatureTest')
+data.setCell(0, 2, 'TestCases.TC002_BookNowRequest')
+data.setCell(0, 3, 9541);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'bookNowFeatureTest')
 data.setCell(1, 2, 'TestCases.TC002_BookNowRequest')
-data.setCell(1, 3, 15150);
+data.setCell(1, 3, 8618);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SuperAdminLoginTest')
-data.setCell(2, 2, 'TestCases.TC003_SuperAdminLogin')
-data.setCell(2, 3, 11837);
+data.setCell(2, 1, 'checkUrlTest')
+data.setCell(2, 2, 'TestCases.TC001_LaunchApplication')
+data.setCell(2, 3, 2621);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'bookNowFeatureTest')
-data.setCell(3, 2, 'TestCases.TC002_BookNowRequest')
-data.setCell(3, 3, 7725);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'checkUrlTest')
-data.setCell(4, 2, 'TestCases.TC001_LaunchApplication')
-data.setCell(4, 3, 2516);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'checkUrlTest')
-data.setCell(5, 2, 'TestCases.TC001_LaunchApplication')
-data.setCell(5, 3, 2359);
+data.setCell(3, 1, 'checkUrlTest')
+data.setCell(3, 2, 'TestCases.TC001_LaunchApplication')
+data.setCell(3, 3, 2592);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -372,88 +300,56 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkUrlTest(chrome)</span>
-                <span class="method-start">4948 ms</span>
+                <span class="method-start">5855 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">7314 ms</span>
+                <span class="method-start">8451 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">7621 ms</span>
+                <span class="method-start">8925 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">bookNowFeatureTest</span>
-                <span class="method-start">12597 ms</span>
+                <span class="method-start">15386 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">27750 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">28473 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">SuperAdminLoginTest</span>
-                <span class="method-start">44832 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">56673 ms</span>
+                <span class="method-start">24929 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(firefox)</span>
-                <span class="method-start">64241 ms</span>
+                <span class="method-start">26942 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkUrlTest(firefox)</span>
-                <span class="method-start">99837 ms</span>
+                <span class="method-start">63496 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">102355 ms</span>
+                <span class="method-start">66120 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(firefox)</span>
-                <span class="method-start">106658 ms</span>
+                <span class="method-start">69732 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">bookNowFeatureTest</span>
-                <span class="method-start">129305 ms</span>
+                <span class="method-start">88226 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">137031 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">139612 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">SuperAdminLoginTest</span>
-                <span class="method-start">167431 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">187986 ms</span>
+                <span class="method-start">96846 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

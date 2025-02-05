@@ -4,7 +4,7 @@
 <suite name="Suite" thread-count="5" parallel="tests">
   
   <listeners>
-    <listener class-name="Utilities.ExtentTestNGListener" />
+    <listener class-name="Utilities.ExtentReportManager" />
   </listeners>
 
   <!-- Test for Chrome -->
@@ -12,8 +12,8 @@
     <parameter name="browser" value="chrome" />
     
     <classes>
-      <class name="TestCases.Test1"/>
-      <class name="TestCases.Test2"/>
+      <class name="TestCases.TC001_LaunchApplication"/>
+      <class name="TestCases.TC002_BookNowRequest"/>
     </classes>
   </test>
 
@@ -22,8 +22,8 @@
     <parameter name="browser" value="firefox" />
     
     <classes>
-      <class name="TestCases.Test1"/>
-      <class name="TestCases.Test2"/>
+      <class name="TestCases.TC001_LaunchApplication"/>
+      <class name="TestCases.TC002_BookNowRequest"/>
     </classes>
   </test>
 

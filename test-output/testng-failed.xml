@@ -5,6 +5,7 @@
     <listener class-name="Utilities.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="Firefox-Test(failed)">
+    <parameter name="headless" value="false"/>
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="TestCases.TC003_SuperAdminLogin">

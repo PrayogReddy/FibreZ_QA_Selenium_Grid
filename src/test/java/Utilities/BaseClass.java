@@ -16,9 +16,11 @@ import org.testng.annotations.Parameters;
 
 public class BaseClass extends ExcelUtils {
     public WebDriver driver;
-    public static final String URL = "http://10.80.3.31/fibrez/";
+    //public static final String URL = "http://10.80.3.31/fibrez/";
+    public static final String URL = "http://10.80.3.60/fibrez/";
     
-    public static final String testDataFilePath = "D:\\Prayog\\T_connect\\Automation\\QA_Smoke_TestData.xlsx";
+    //public static final String testDataFilePath = "D:\\Prayog\\T_connect\\Automation\\QA_Smoke_TestData.xlsx";
+    public static final String testDataFilePath = "D:\\Prayog\\T_connect\\Automation\\Dev_Smoke_TestData.xlsx";
     public static final String testDataSheetName1 = "Book Now Creation";  
     public static final String testDataSheetName2 = "Login Types";
     

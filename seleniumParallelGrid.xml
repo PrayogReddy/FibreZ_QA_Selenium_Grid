@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite" thread-count="5" parallel="tests">
-  
+<suite name="FibreZ TestSuite QA" thread-count="10" parallel="classes">
+
   <listeners>
     <listener class-name="Utilities.ExtentReportManager" />
   </listeners>
@@ -10,21 +10,29 @@
   <!-- Test for Chrome -->
   <test name="Chrome-Test">
     <parameter name="browser" value="chrome" />
-    
+    <parameter name="reportName" value="Chrome_TestReport" />
+
     <classes>
       <class name="TestCases.TC001_LaunchApplication"/>
       <class name="TestCases.TC002_BookNowRequest"/>
+      <class name="TestCases.TC003_SuperAdminLogin"/>
+      <class name="TestCases.TC004_AdminLogin"/>
+      <class name="TestCases.TC005_AdminRolesPage"/>
     </classes>
   </test>
 
   <!-- Test for Firefox -->
   <test name="Firefox-Test">
     <parameter name="browser" value="firefox" />
-    
+    <parameter name="reportName" value="Firefox_TestReport" />
+
     <classes>
       <class name="TestCases.TC001_LaunchApplication"/>
       <class name="TestCases.TC002_BookNowRequest"/>
+      <class name="TestCases.TC003_SuperAdminLogin"/>
+      <class name="TestCases.TC004_AdminLogin"/>
+      <class name="TestCases.TC005_AdminRolesPage"/>
     </classes>
   </test>
 
-</suite> <!-- Suite -->
+</suite>

@@ -7,12 +7,15 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -26,31 +29,34 @@ public class ExtentReportManager implements ITestListener {
 
     private static final String OUTPUT_FOLDER = System.getProperty("user.dir") + "/ExtentReports/";
     private static ExtentReports extent;
-    private static ExtentSparkReporter sparkReporter;
     private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     private static List<ExtentTest> testList = new ArrayList<>();
-    private String reportPath;
-
-    // Getter method for ExtentTest
-    public static ExtentTest getExtentTest() {
-        return extentTest.get();
+    private static String reportPath;
+    
+    private static WebDriver driver;
+    
+    public static void setDriver(WebDriver driverInstance) {
+        driver = driverInstance;
     }
-
+    
     @Override
     public void onStart(ITestContext context) {
         System.out.println("Test Suite started!");
 
         String suiteName = context.getSuite().getName();
-        String testName = context.getCurrentXmlTest().getName();
+        String testName = context.getName();  // This will give the name of the test
 
+        // If suiteName or testName is "Default suite" or "Default test", update them
         if (suiteName.equalsIgnoreCase("Default suite") || testName.equalsIgnoreCase("Default test")) {
             suiteName = context.getAllTestMethods()[0].getTestClass().getRealClass().getSimpleName();
             testName = context.getAllTestMethods()[0].getMethodName();
         }
 
+        String browserName = context.getCurrentXmlTest().getParameter("browser");
+        browserName = browserName.substring(0, 1).toUpperCase() + browserName.substring(1).toLowerCase();
         String timestamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
-        String reportFileName = OUTPUT_FOLDER + suiteName.replace(" ", "_") + "_Report_" + timestamp + ".html";
-
+        String reportFileName = OUTPUT_FOLDER + suiteName.replace(" ", "_") + "_" + browserName + "_Report_" + timestamp + ".html";
+        
         Path path = Paths.get(OUTPUT_FOLDER);
         if (!Files.exists(path)) {
             try {
@@ -59,18 +65,14 @@ public class ExtentReportManager implements ITestListener {
                 e.printStackTrace();
             }
         }
-
+        
         extent = new ExtentReports();
-        sparkReporter = new ExtentSparkReporter(reportFileName);        
-        this.reportPath = reportFileName; // Save report path for use in onFinish
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportFileName);
+        reportPath = reportFileName;
 
-        sparkReporter.config().setReportName(suiteName.replace(" ", "_") + "_QA_Report");
-        sparkReporter.config().setDocumentTitle(suiteName.replace(" ", "_") + "_QA_Report_" + timestamp);
-        sparkReporter.config().setTheme(Theme.STANDARD); // Optionally, set to DARK for a dark theme
-
-//        // Set the path to the local CSS file
-//        sparkReporter.config().setCss(OUTPUT_FOLDER + "spark-style.css");
-//        sparkReporter.config().setCss(OUTPUT_FOLDER + "fontawesome.min.css");
+        sparkReporter.config().setReportName(suiteName.replace(" ", "_") + "_" + browserName + "_Report");
+        sparkReporter.config().setDocumentTitle(suiteName.replace(" ", "_") + "_Report_" + timestamp);
+        sparkReporter.config().setTheme(Theme.STANDARD);
         
         extent.attachReporter(sparkReporter);
 
@@ -80,26 +82,19 @@ public class ExtentReportManager implements ITestListener {
         extent.setSystemInfo("Team", "QA");
         extent.setSystemInfo("Customer Name", "FibreZ");
         extent.setSystemInfo("Test Type", "Smoke Testing");
+        extent.setSystemInfo("Environment", "Selenium Grid");
     }
+
+
 
     @Override
     public void onTestStart(ITestResult result) {
         String methodName = result.getMethod().getMethodName();
         System.out.println(methodName + " started!");
         ExtentTest test = extent.createTest(methodName, result.getMethod().getDescription());
-
-//      String className = result.getTestClass().getRealClass().getSimpleName();
-//
-//      // Assign category using class name
-//      test.assignCategory(className);
-//
-//      // Assign tags (optional: you can add more tags here, if needed)
-//      test.assignCategory(result.getTestContext().getSuite().getName());
         
         extentTest.set(test);
         extentTest.get().getModel().setStartTime(getTime(result.getStartMillis()));
-
-        // Add test to the list as soon as it starts, to maintain the order of execution
         testList.add(extentTest.get());
     }
 
@@ -117,8 +112,30 @@ public class ExtentReportManager implements ITestListener {
         ExtentTest test = extentTest.get();
         test.fail(result.getThrowable());
         test.getModel().setEndTime(getTime(result.getEndMillis()));
+        
+        if (driver != null) {
+            String screenshotPath = takeScreenshot(result.getMethod().getMethodName());
+            test.addScreenCaptureFromPath(screenshotPath);
+        }
     }
-
+    
+    private String takeScreenshot(String methodName) {
+        String screenshotPath = OUTPUT_FOLDER + "screenshots/";
+        File screenshotDir = new File(screenshotPath);
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs();
+        }
+        
+        String filePath = screenshotPath + methodName + "_" + new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date()) + ".png";
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(screenshot, new File(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return filePath;
+    }
+    
     @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println(result.getMethod().getMethodName() + " skipped!");
@@ -130,19 +147,8 @@ public class ExtentReportManager implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         System.out.println("Test Suite is ending!");
-
-//        // Sort test cases by start time
-//        testList.sort(Comparator.comparing(t -> t.getModel().getStartTime()));
-//
-//        // Log the sorted tests to verify order (optional)
-//        for (ExtentTest test : testList) {
-//        	System.out.println("Test: " + test.getModel().getName() + " - Start Time: " + test.getModel().getStartTime());
-//        }
-
-        // Flush the extent report
         extent.flush();
-
-        // Attempt to open the report automatically upon test completion
+        
         File extentReport = new File(reportPath);
         try {
             Desktop.getDesktop().browse(extentReport.toURI());
@@ -150,10 +156,14 @@ public class ExtentReportManager implements ITestListener {
             e.printStackTrace();
         }
     }
-
+    
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
+    }    
+         // Get the ExtentTest instance for current thread
+    public static ExtentTest getExtentTest() {
+        return extentTest.get();
     }
 }

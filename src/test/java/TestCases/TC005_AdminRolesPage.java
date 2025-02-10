@@ -42,7 +42,7 @@ public class TC005_AdminRolesPage extends BaseClass {
 
         while (!isLCORoleFound && !isLastPageReached) {
             // Capture all the data of the web table in Roles
-            WebElement rolesTable = driver.findElement(By.xpath("//table[@class='w-full table-data']"));
+            WebElement rolesTable = driver.findElement(By.xpath("//table[contains(@class,'table-data')]"));
             List<WebElement> rows = rolesTable.findElements(By.tagName("tr"));
 
             // Iterate through each row to find the specific role

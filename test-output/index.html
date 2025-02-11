@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-FibreZ_TestSuite_QA" class="navigator-link">
-              <span class="suite-name border-passed">FibreZ TestSuite QA</span>
+              <span class="suite-name border-failed">FibreZ TestSuite QA</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-FibreZ_TestSuite_QA" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">15 methods, 1 failed,  2 skipped,  12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-FibreZ_TestSuite_QA" class="hide-methods failed suite-FibreZ_TestSuite_QA"> (hide)</a> <!-- hide-methods failed suite-FibreZ_TestSuite_QA -->
+                      <a href="#" panel-name="suite-FibreZ_TestSuite_QA" class="show-methods failed suite-FibreZ_TestSuite_QA"> (show)</a> <!-- show-methods failed suite-FibreZ_TestSuite_QA -->
+                    </span>
+                    <div class="method-list-content failed suite-FibreZ_TestSuite_QA">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC005_AdminRolesPage" class="method navigator-link" hash-for-method="rolesPageLCORoleCreateRoleTest">rolesPageLCORoleCreateRoleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-FibreZ_TestSuite_QA -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-FibreZ_TestSuite_QA" class="hide-methods skipped suite-FibreZ_TestSuite_QA"> (hide)</a> <!-- hide-methods skipped suite-FibreZ_TestSuite_QA -->
+                      <a href="#" panel-name="suite-FibreZ_TestSuite_QA" class="show-methods skipped suite-FibreZ_TestSuite_QA"> (show)</a> <!-- show-methods skipped suite-FibreZ_TestSuite_QA -->
+                    </span>
+                    <div class="method-list-content skipped suite-FibreZ_TestSuite_QA">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC001_LaunchApplication" class="method navigator-link" hash-for-method="checkUrlTest(edge)">checkUrlTest(edge)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC001_LaunchApplication" class="method navigator-link" hash-for-method="checkUrlTest(chrome)">checkUrlTest(chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-FibreZ_TestSuite_QA -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,6 +146,16 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC003_SuperAdminLogin" class="method navigator-link" hash-for-method="SuperAdminLoginTest">SuperAdminLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC004_AdminLogin" class="method navigator-link" hash-for-method="adminLoginTest">adminLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC004_AdminLogin" class="method navigator-link" hash-for-method="adminLoginTest">adminLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -133,7 +176,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC001_LaunchApplication" class="method navigator-link" hash-for-method="checkUrlTest(chrome)">checkUrlTest(chrome)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-FibreZ_TestSuite_QA" title="TestCases.TC002_BookNowRequest" class="method navigator-link" hash-for-method="bookNowFeatureTest">bookNowFeatureTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,6 +206,133 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FibreZ_TestSuite_QA" class="panel FibreZ_TestSuite_QA">
+          <div class="suite-FibreZ_TestSuite_QA-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.TC005_AdminRolesPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="rolesPageLCORoleCreateRoleTest">
+                  </a> <!-- rolesPageLCORoleCreateRoleTest -->
+                  <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;span class=&quot;font-lexendDecaLight&quot;&gt; is not clickable at point (64,156) because another element &lt;body class=&quot;loading-indicator&quot;&gt; obscures it
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [28b0b58a-f1a9-40f2-b82e-bcb45b71c527, clickElement {id=c321ec64-01b3-4a5a-ad4d-0a41598be836}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 134.0.2, container:hostname: 6fa9a6966d58, moz:accessibilityChecks: false, moz:buildID: 20250120135430, moz:debuggerAddress: true, moz:firefoxOptions: {}, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 5.15.167.4-microsoft-standa..., moz:processID: 5533, moz:profile: /tmp/rust_mozprofilefEm3ve, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:containerName: 6fa9a6966d58, se:noVncPort: 7900, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Element: [[RemoteWebDriver: firefox on linux (28b0b58a-f1a9-40f2-b82e-bcb45b71c527)] -&gt; xpath: //span[normalize-space()=&apos;Roles&apos;]]
+Session ID: 28b0b58a-f1a9-40f2-b82e-bcb45b71c527
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at TestCases.TC005_AdminRolesPage.rolesPageLCORoleCreateRoleTest(TC005_AdminRolesPage.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FibreZ_TestSuite_QA-class-failed -->
+          <div class="suite-FibreZ_TestSuite_QA-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">TestCases.TC001_LaunchApplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUrlTest(edge)">
+                  </a> <!-- checkUrlTest(edge) -->
+                  <span class="method-name">checkUrlTest</span>
+                  <span class="parameters">(edge)</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: session not created: DevToolsActivePort file doesn&apos;t exist 
+Host info: host: &apos;20cbcb1b1e18&apos;, ip: &apos;172.18.0.4&apos;
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.167.4-microsoft-standard-WSL2&apos;, java.version: &apos;17.0.13&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.167.4-microsoft-standard-WSL2&apos;, java.version: &apos;17.0.13&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.167.4-microsoft-standard-WSL2&apos;, java.version: &apos;17.0.13&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)
+	at Utilities.BaseClass.startBrowser(BaseClass.java:55)
+	at Utilities.BaseClass.setup(BaseClass.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkUrlTest(chrome)">
+                  </a> <!-- checkUrlTest(chrome) -->
+                  <span class="method-name">checkUrlTest</span>
+                  <span class="parameters">(chrome)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [8cf80001d9f4dc4bbd6cfa6f8ee2bb62, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.159, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41775}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.5:4444/sessio..., se:cdpVersion: 132.0.6834.159, se:containerName: 3940c5492e1f, se:noVncPort: 7900, se:vnc: ws://172.18.0.5:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.5:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8cf80001d9f4dc4bbd6cfa6f8ee2bb62
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:386)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:352)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:855)
+	at Utilities.BaseClass.setup(BaseClass.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.http.HttpTimeoutException: request timed out
+	at java.net.http/jdk.internal.net.http.ResponseTimerEvent.handle(ResponseTimerEvent.java:63)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.purgeTimeoutsAndReturnNextDeadline(HttpClientImpl.java:1778)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1376)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FibreZ_TestSuite_QA-class-skipped -->
           <div class="suite-FibreZ_TestSuite_QA-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -183,26 +353,11 @@
                   <span class="method-name">bookNowFeatureTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FibreZ_TestSuite_QA-class-passed -->
-          <div class="suite-FibreZ_TestSuite_QA-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestCases.TC004_AdminLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="adminLoginTest">
-                  </a> <!-- adminLoginTest -->
-                  <span class="method-name">adminLoginTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="adminLoginTest">
-                  </a> <!-- adminLoginTest -->
-                  <span class="method-name">adminLoginTest</span>
+                  <a name="bookNowFeatureTest">
+                  </a> <!-- bookNowFeatureTest -->
+                  <span class="method-name">bookNowFeatureTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,9 +387,45 @@
           <div class="suite-FibreZ_TestSuite_QA-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">TestCases.TC004_AdminLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="adminLoginTest">
+                  </a> <!-- adminLoginTest -->
+                  <span class="method-name">adminLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="adminLoginTest">
+                  </a> <!-- adminLoginTest -->
+                  <span class="method-name">adminLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="adminLoginTest">
+                  </a> <!-- adminLoginTest -->
+                  <span class="method-name">adminLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FibreZ_TestSuite_QA-class-passed -->
+          <div class="suite-FibreZ_TestSuite_QA-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">TestCases.TC003_SuperAdminLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SuperAdminLoginTest">
+                  </a> <!-- SuperAdminLoginTest -->
+                  <span class="method-name">SuperAdminLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="SuperAdminLoginTest">
@@ -259,14 +450,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkUrlTest(chrome)">
-                  </a> <!-- checkUrlTest(chrome) -->
-                  <span class="method-name">checkUrlTest</span>
-                  <span class="parameters">(chrome)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="checkUrlTest(firefox)">
                   </a> <!-- checkUrlTest(firefox) -->
                   <span class="method-name">checkUrlTest</span>
@@ -284,11 +467,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;10&quot; parallel=&quot;classes&quot; name=&quot;FibreZ TestSuite QA&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite thread-count=&quot;6&quot; parallel=&quot;tests&quot; name=&quot;FibreZ TestSuite QA&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Utilities.ExtentReportManager&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;10&quot; parallel=&quot;classes&quot; name=&quot;Chrome-Test&quot;&gt;
+  &lt;test thread-count=&quot;6&quot; parallel=&quot;tests&quot; name=&quot;Chrome-Test&quot;&gt;
     &lt;parameter name=&quot;reportName&quot; value=&quot;Chrome_TestReport&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
@@ -299,7 +482,7 @@
       &lt;class name=&quot;TestCases.TC005_AdminRolesPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Chrome-Test --&gt;
-  &lt;test thread-count=&quot;10&quot; parallel=&quot;classes&quot; name=&quot;Firefox-Test&quot;&gt;
+  &lt;test thread-count=&quot;6&quot; parallel=&quot;tests&quot; name=&quot;Firefox-Test&quot;&gt;
     &lt;parameter name=&quot;reportName&quot; value=&quot;Firefox_TestReport&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
@@ -310,6 +493,17 @@
       &lt;class name=&quot;TestCases.TC005_AdminRolesPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Firefox-Test --&gt;
+  &lt;test thread-count=&quot;6&quot; parallel=&quot;tests&quot; name=&quot;Edge-Test&quot;&gt;
+    &lt;parameter name=&quot;reportName&quot; value=&quot;Edge_TestReport&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestCases.TC001_LaunchApplication&quot;/&gt;
+      &lt;class name=&quot;TestCases.TC002_BookNowRequest&quot;/&gt;
+      &lt;class name=&quot;TestCases.TC003_SuperAdminLogin&quot;/&gt;
+      &lt;class name=&quot;TestCases.TC004_AdminLogin&quot;/&gt;
+      &lt;class name=&quot;TestCases.TC005_AdminRolesPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Edge-Test --&gt;
 &lt;/suite&gt; &lt;!-- FibreZ TestSuite QA --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -325,6 +519,9 @@
               </li>
               <li>
                 <span class="test-name">Firefox-Test (5 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Edge-Test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -350,47 +547,67 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(15);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'adminLoginTest')
 data.setCell(0, 2, 'TestCases.TC004_AdminLogin')
-data.setCell(0, 3, 78245);
+data.setCell(0, 3, 24573);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'SuperAdminLoginTest')
 data.setCell(1, 2, 'TestCases.TC003_SuperAdminLogin')
-data.setCell(1, 3, 57013);
+data.setCell(1, 3, 16601);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SuperAdminLoginTest')
-data.setCell(2, 2, 'TestCases.TC003_SuperAdminLogin')
-data.setCell(2, 3, 38547);
+data.setCell(2, 1, 'bookNowFeatureTest')
+data.setCell(2, 2, 'TestCases.TC002_BookNowRequest')
+data.setCell(2, 3, 15341);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'rolesPageLCORoleCreateRoleTest')
-data.setCell(3, 2, 'TestCases.TC005_AdminRolesPage')
-data.setCell(3, 3, 35146);
+data.setCell(3, 1, 'SuperAdminLoginTest')
+data.setCell(3, 2, 'TestCases.TC003_SuperAdminLogin')
+data.setCell(3, 3, 15029);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'bookNowFeatureTest')
-data.setCell(4, 2, 'TestCases.TC002_BookNowRequest')
-data.setCell(4, 3, 33832);
+data.setCell(4, 1, 'SuperAdminLoginTest')
+data.setCell(4, 2, 'TestCases.TC003_SuperAdminLogin')
+data.setCell(4, 3, 14443);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'adminLoginTest')
-data.setCell(5, 2, 'TestCases.TC004_AdminLogin')
-data.setCell(5, 3, 32809);
+data.setCell(5, 1, 'bookNowFeatureTest')
+data.setCell(5, 2, 'TestCases.TC002_BookNowRequest')
+data.setCell(5, 3, 11690);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'rolesPageLCORoleCreateRoleTest')
-data.setCell(6, 2, 'TestCases.TC005_AdminRolesPage')
-data.setCell(6, 3, 30678);
+data.setCell(6, 1, 'adminLoginTest')
+data.setCell(6, 2, 'TestCases.TC004_AdminLogin')
+data.setCell(6, 3, 11062);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'checkUrlTest')
-data.setCell(7, 2, 'TestCases.TC001_LaunchApplication')
-data.setCell(7, 3, 26102);
+data.setCell(7, 1, 'adminLoginTest')
+data.setCell(7, 2, 'TestCases.TC004_AdminLogin')
+data.setCell(7, 3, 10436);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'bookNowFeatureTest')
-data.setCell(8, 2, 'TestCases.TC002_BookNowRequest')
-data.setCell(8, 3, 22438);
+data.setCell(8, 1, 'rolesPageLCORoleCreateRoleTest')
+data.setCell(8, 2, 'TestCases.TC005_AdminRolesPage')
+data.setCell(8, 3, 9963);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'checkUrlTest')
-data.setCell(9, 2, 'TestCases.TC001_LaunchApplication')
-data.setCell(9, 3, 4389);
+data.setCell(9, 1, 'bookNowFeatureTest')
+data.setCell(9, 2, 'TestCases.TC002_BookNowRequest')
+data.setCell(9, 3, 9646);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'rolesPageLCORoleCreateRoleTest')
+data.setCell(10, 2, 'TestCases.TC005_AdminRolesPage')
+data.setCell(10, 3, 9412);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'rolesPageLCORoleCreateRoleTest')
+data.setCell(11, 2, 'TestCases.TC005_AdminRolesPage')
+data.setCell(11, 3, 6193);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'checkUrlTest')
+data.setCell(12, 2, 'TestCases.TC001_LaunchApplication')
+data.setCell(12, 3, 2651);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'checkUrlTest')
+data.setCell(13, 2, 'TestCases.TC001_LaunchApplication')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'checkUrlTest')
+data.setCell(14, 2, 'TestCases.TC001_LaunchApplication')
+data.setCell(14, 3, 0);
 window.suiteTableData['FibreZ_TestSuite_QA']= { tableData: data, tableDiv: 'times-div-FibreZ_TestSuite_QA'}
 return data;
 }
@@ -421,213 +638,242 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox)</span>
                 <span class="method-start">1 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup(chrome)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(edge)</span>
                 <span class="method-start">1 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">SuperAdminLoginTest</span>
-                <span class="method-start">24057 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">bookNowFeatureTest</span>
-                <span class="method-start">24105 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">checkUrlTest(chrome)</span>
-                <span class="method-start">24127 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
-                <span class="method-start">24143 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">adminLoginTest</span>
-                <span class="method-start">26031 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">28521 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">57941 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">58842 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">59290 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">62608 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">70684 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">70684 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">70685 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">70685 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">70701 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">bookNowFeatureTest</span>
-                <span class="method-start">170871 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">adminLoginTest</span>
-                <span class="method-start">170923 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">SuperAdminLoginTest</span>
-                <span class="method-start">171805 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
-                <span class="method-start">172383 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checkUrlTest(firefox)</span>
-                <span class="method-start">172730 ms</span>
+                <span class="method-start">108133 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">110790 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">116191 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">120961 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">bookNowFeatureTest</span>
+                <span class="method-start">147190 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">bookNowFeatureTest</span>
+                <span class="method-start">157715 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">162534 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">164598 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">167366 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">175048 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SuperAdminLoginTest</span>
+                <span class="method-start">182711 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">197159 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">198902 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">SuperAdminLoginTest</span>
+                <span class="method-start">210190 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">adminLoginTest</span>
+                <span class="method-start">212090 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">223153 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(edge)</span>
+                <span class="method-start">224703 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">225221 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">238736 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
+                <span class="method-start">244948 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">252136 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">254361 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">bookNowFeatureTest</span>
+                <span class="method-start">266507 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">adminLoginTest</span>
+                <span class="method-start">273141 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC002_BookNowRequest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">193310 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC001_LaunchApplication</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">198833 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">203062 ms</span>
+                <span class="method-start">278201 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">228820 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">278829 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SuperAdminLoginTest</span>
+                <span class="method-start">295759 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">249171 ms</span>
+                <span class="method-start">297715 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">307716 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC003_SuperAdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">312361 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC004_AdminLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">312572 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">adminLoginTest</span>
+                <span class="method-start">321112 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">331550 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.TC005_AdminRolesPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">332159 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
+                <span class="method-start">338858 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">rolesPageLCORoleCreateRoleTest</span>
+                <span class="method-start">342195 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">348392 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">348823 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

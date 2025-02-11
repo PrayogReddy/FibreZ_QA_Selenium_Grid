@@ -28,6 +28,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportManager implements ITestListener {
 
     private static final String OUTPUT_FOLDER = System.getProperty("user.dir") + "/ExtentReports/";
+    private static final String SCREENSHOT_FOLDER = System.getProperty("user.dir") + "/Screenshots/"; // New separate screenshot folder
     private static ExtentReports extent;
     private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     private static List<ExtentTest> testList = new ArrayList<>();
@@ -38,15 +39,14 @@ public class ExtentReportManager implements ITestListener {
     public static void setDriver(WebDriver driverInstance) {
         driver = driverInstance;
     }
-    
+
     @Override
     public void onStart(ITestContext context) {
         System.out.println("Test Suite started!");
-
+        
         String suiteName = context.getSuite().getName();
-        String testName = context.getName();  // This will give the name of the test
-
-        // If suiteName or testName is "Default suite" or "Default test", update them
+        String testName = context.getName();
+        
         if (suiteName.equalsIgnoreCase("Default suite") || testName.equalsIgnoreCase("Default test")) {
             suiteName = context.getAllTestMethods()[0].getTestClass().getRealClass().getSimpleName();
             testName = context.getAllTestMethods()[0].getMethodName();
@@ -62,6 +62,7 @@ public class ExtentReportManager implements ITestListener {
             try {
                 Files.createDirectories(path);
             } catch (IOException e) {
+                System.err.println("Failed to create directories: " + path);
                 e.printStackTrace();
             }
         }
@@ -84,8 +85,6 @@ public class ExtentReportManager implements ITestListener {
         extent.setSystemInfo("Test Type", "Smoke Testing");
         extent.setSystemInfo("Environment", "Selenium Grid");
     }
-
-
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -118,24 +117,26 @@ public class ExtentReportManager implements ITestListener {
             test.addScreenCaptureFromPath(screenshotPath);
         }
     }
-    
+
     private String takeScreenshot(String methodName) {
-        String screenshotPath = OUTPUT_FOLDER + "screenshots/";
-        File screenshotDir = new File(screenshotPath);
-        if (!screenshotDir.exists()) {
-            screenshotDir.mkdirs();
+        File dir = new File(SCREENSHOT_FOLDER);
+        if (!dir.exists()) {
+            dir.mkdirs();  // Create the folder if it doesn't exist
         }
-        
-        String filePath = screenshotPath + methodName + "_" + new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date()) + ".png";
+
+        // Generate screenshot file path
+        String filePath = SCREENSHOT_FOLDER + methodName + "_" + new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date()) + ".png";
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
+            // Copy the screenshot to the specified file path
             FileUtils.copyFile(screenshot, new File(filePath));
         } catch (IOException e) {
+            System.err.println("Failed to capture screenshot: " + filePath);
             e.printStackTrace();
         }
-        return filePath;
+        return filePath;  // Return the file path for the screenshot
     }
-    
+
     @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println(result.getMethod().getMethodName() + " skipped!");
@@ -153,16 +154,17 @@ public class ExtentReportManager implements ITestListener {
         try {
             Desktop.getDesktop().browse(extentReport.toURI());
         } catch (IOException e) {
+            System.err.println("Failed to open report in browser.");
             e.printStackTrace();
         }
     }
-    
+
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
-    }    
-         // Get the ExtentTest instance for current thread
+    }
+    
     public static ExtentTest getExtentTest() {
         return extentTest.get();
     }

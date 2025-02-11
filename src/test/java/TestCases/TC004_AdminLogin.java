@@ -27,6 +27,7 @@ public class TC004_AdminLogin extends BaseClass {
 
         // Perform admin login
         adminLogin();
+        Thread.sleep(2000);
         ExtentReportManager.getExtentTest().log(Status.INFO, "Admin login performed");
 
         // Verify if login is successful by checking for 'Logout' text

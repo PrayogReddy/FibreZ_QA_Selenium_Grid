@@ -24,6 +24,7 @@ public class TC003_SuperAdminLogin extends BaseClass {
         // Open the application URL
         Thread.sleep(2000);
         driver.get(URL);
+        Thread.sleep(2000);
         ExtentReportManager.getExtentTest().log(Status.INFO, "Navigated to URL: " + URL);
 
         // Perform SuperAdmin login

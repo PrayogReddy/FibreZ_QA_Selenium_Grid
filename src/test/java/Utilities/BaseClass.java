@@ -6,6 +6,7 @@ import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,7 +50,10 @@ public class BaseClass extends ExcelUtils {
                 break;
             case "firefox":
                 driver = new RemoteWebDriver(gridUrl, new FirefoxOptions());
-                break;            
+                break;  
+            case "edge":
+                driver = new RemoteWebDriver(gridUrl, new EdgeOptions());
+                break;
             default:
                 throw new IllegalArgumentException("Invalid browser name: " + browserName);
         }

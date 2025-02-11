@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="FibreZ TestSuite QA" thread-count="10" parallel="classes">
+<suite name="FibreZ TestSuite QA" parallel="tests" thread-count="6">
 
   <listeners>
     <listener class-name="Utilities.ExtentReportManager" />
@@ -25,6 +25,20 @@
   <test name="Firefox-Test">
     <parameter name="browser" value="firefox" />
     <parameter name="reportName" value="Firefox_TestReport" />
+
+    <classes>
+      <class name="TestCases.TC001_LaunchApplication"/>
+      <class name="TestCases.TC002_BookNowRequest"/>
+      <class name="TestCases.TC003_SuperAdminLogin"/>
+      <class name="TestCases.TC004_AdminLogin"/>
+      <class name="TestCases.TC005_AdminRolesPage"/>
+    </classes>
+  </test>
+
+  <!-- Test for Edge -->
+  <test name="Edge-Test">
+    <parameter name="browser" value="edge" />
+    <parameter name="reportName" value="Edge_TestReport" />
 
     <classes>
       <class name="TestCases.TC001_LaunchApplication"/>

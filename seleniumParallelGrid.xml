@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="FibreZ TestSuite QA" parallel="tests" thread-count="6">
+<suite name="FibreZ TestSuite QA" parallel="classes" thread-count="6">
 
   <listeners>
     <listener class-name="Utilities.ExtentReportManager" />
